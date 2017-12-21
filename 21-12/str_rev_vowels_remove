@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int main() 
+{
+char a[10]="kishore",rev[10],op[10];
+int i,j,n,k;
+n=strlen(a);
+for(i=0;a[i]!='\0';i++)
+{
+    rev[n-1-i]=a[i];
+}
+//printf("%s",rev);
+
+    for(j=0;j<n;j++)
+    {
+    if(rev[j]=='a' ||rev[j]=='e' ||rev[j]=='i' ||rev[j]=='o' ||rev[j]=='u')
+    {
+    for(k=j+1;k<n;k++)
+    rev[k-1]=rev[k];
+    rev[k-1]='\0';
+    }
+    }
+    printf("%s",rev);
+}
